@@ -1,0 +1,15 @@
+.confirmation {
+  &_failure {
+    height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff5c5c;
+  }
+  &_success {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
