@@ -15,19 +15,9 @@ class PaymentWallWrapper extends React.Component {
     isError: false,
     redirect: false
   }
-  componentDidMount() {
-  }
   redirectToWidget = () => {
     const {
-      widget1,
-      ag_external_id,
       amount,
-      currencycode,
-      ag_name,
-      email,
-      registrationDate,
-      ps,
-      additional_param_name,
       paymentMethod,
       currency,
     } = this.props
