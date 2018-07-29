@@ -37,150 +37,185 @@
   margin: 0px auto;
   background: #596d80;
   padding-bottom: 10px; }
-  .payment-page-container .header {
-    height: 80px;
-    width: 100%;
-    display: flex;
-    box-shadow: 0px 5px 4px 0 rgba(0, 0, 0, 0.3);
-    background-color: #e8e7e8;
-    color: #008080;
-    font-weight: bold;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-family: "Museo Sans Rounded"; }
-  .payment-page-container .payment-method-container {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    background-color: #ececec;
-    box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.3);
-    margin-left: 10%;
-    margin-right: 10%;
-    position: relative;
-    padding: 10px 20px;
-    border-radius: 5px; }
-    .payment-page-container .payment-method-container .prev {
-      position: absolute;
-      left: 0;
-      top: 80px;
-      cursor: pointer; }
-    .payment-page-container .payment-method-container .next {
-      right: 0;
-      position: absolute;
-      top: 80px;
-      cursor: pointer; }
-    .payment-page-container .payment-method-container .heading {
-      text-align: left;
-      margin-bottom: 20px;
-      color: #008080; }
-    .payment-page-container .payment-method-container .method-list {
-      list-style: none;
-      display: flex;
-      height: 100px;
-      overflow-x: auto;
-      transition: all 2s ease-in;
-      padding: 14px 14px 14px 0px; }
-      .payment-page-container .payment-method-container .method-list > li {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 3px 3px #b1a3a34d;
-        cursor: pointer;
-        min-width: 100px;
-        height: 50px;
-        margin-right: 20px;
-        transition: all 1s;
-        border-radius: 5px;
-        background: #fff; }
-      .payment-page-container .payment-method-container .method-list > li:hover {
-        transform: scale(1.1); }
-      .payment-page-container .payment-method-container .method-list .border-green {
-        border: 3px solid lightgreen; }
-  .payment-page-container .country-selector-container {
-    align-items: center; }
-    .payment-page-container .country-selector-container .heading {
-      color: #008080; }
-    .payment-page-container .country-selector-container .country-select {
-      height: 40px;
-      font-size: 18px;
-      background: #fff;
-      padding-left: 5px;
-      padding-right: 5px;
-      border: solid 1px #dadada;
-      box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.3);
-      border-radius: 5px; }
-  .payment-page-container .amount-section {
-    align-items: center; }
-    .payment-page-container .amount-section .heading {
-      color: #008080; }
-    .payment-page-container .amount-section input {
-      border: solid 1px #dadada;
-      box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.3);
-      border-radius: 5px;
-      height: 40px;
-      font-size: 18px;
-      padding-right: 5px;
-      padding-left: 5px; }
-  .payment-page-container .card-section {
-    align-items: center; }
-    .payment-page-container .card-section h3 {
-      color: #008080; }
-    .payment-page-container .card-section .input-fields {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-      .payment-page-container .card-section .input-fields .label-part {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end; }
-        .payment-page-container .card-section .input-fields .label-part label {
-          margin-bottom: 20px;
-          width: 200px;
-          text-align: right;
-          padding-right: 10px;
-          height: 30px;
-          display: flex;
-          justify-content: flex-end;
-          align-items: center; }
-      .payment-page-container .card-section .input-fields .input-part {
-        display: flex;
-        flex-direction: column; }
-        .payment-page-container .card-section .input-fields .input-part .exp-section input {
-          width: 60px; }
-        .payment-page-container .card-section .input-fields .input-part .exp-section #exp-yyyy {
-          width: 80px; }
-        .payment-page-container .card-section .input-fields .input-part .exp-section span {
-          margin-left: 2px;
-          margin-right: 2px; }
-        .payment-page-container .card-section .input-fields .input-part input {
-          margin-bottom: 20px;
-          height: 30px;
-          border-radius: 5px;
-          padding-left: 5px;
-          padding-right: 5px;
-          border: solid 1px #dadada; }
-    .payment-page-container .card-section .pay-now-btn-section {
-      display: flex;
-      margin: 0px auto;
-      align-items: center;
-      flex-direction: column; }
-      .payment-page-container .card-section .pay-now-btn-section button {
-        height: 40px;
-        min-width: 150px;
-        display: block;
-        margin: 0px auto;
-        font-size: 18px;
-        border-radius: 5px;
-        box-shadow: 0px 1px 4px 0 rgba(177, 51, 51, 0.3);
-        transition: all 1s;
-        background: #e0ebe8;
-        color: #008080;
-        border: 2px solid #90C695; }
-      .payment-page-container .card-section .pay-now-btn-section button:hover {
-        transform: scale(1.2); }
-      .payment-page-container .card-section .pay-now-btn-section .error-log {
-        margin-left: 26px;
-        color: #ff5c5c;
-        width: 230px;
-        margin-top: 10px; }
+
+.payment-page-container .header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  box-shadow: 0px 5px 4px 0 rgba(0, 0, 0, 0.3);
+  background-color: #e8e7e8;
+  color: #008080;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-family: "Museo Sans Rounded"; }
+
+.payment-page-container .payment-method-container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: #ececec;
+  box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.3);
+  margin-left: 10%;
+  margin-right: 10%;
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 5px; }
+
+.payment-page-container .payment-method-container .prev {
+  position: absolute;
+  left: 0;
+  top: 80px;
+  cursor: pointer; }
+
+.payment-page-container .payment-method-container .next {
+  right: 0;
+  position: absolute;
+  top: 80px;
+  cursor: pointer; }
+
+.payment-page-container .payment-method-container .heading {
+  text-align: left;
+  margin-bottom: 20px;
+  color: #008080; }
+
+.payment-page-container .payment-method-container .method-list {
+  list-style: none;
+  display: flex;
+  height: 100px;
+  overflow-x: auto;
+  transition: all 2s ease-in;
+  padding: 14px 14px 14px 0px; }
+
+.payment-page-container .payment-method-container .method-list > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 3px #b1a3a34d;
+  cursor: pointer;
+  min-width: 100px;
+  height: 50px;
+  margin-right: 20px;
+  transition: all 1s;
+  border-radius: 5px;
+  background: #fff; }
+
+.payment-page-container .payment-method-container .method-list > li:hover {
+  transform: scale(1.1); }
+
+.payment-page-container .payment-method-container .method-list .border-green {
+  border: 3px solid lightgreen; }
+
+.payment-page-container .country-selector-container {
+  align-items: center; }
+
+.payment-page-container .country-selector-container .heading {
+  color: #008080; }
+
+.payment-page-container .country-selector-container .country-select {
+  height: 40px;
+  font-size: 18px;
+  background: #fff;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: solid 1px #dadada;
+  box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 5px; }
+
+.payment-page-container .amount-section {
+  align-items: center; }
+
+.payment-page-container .amount-section .heading {
+  color: #008080; }
+
+.payment-page-container .amount-section input {
+  border: solid 1px #dadada;
+  box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  height: 40px;
+  font-size: 18px;
+  padding-right: 5px;
+  padding-left: 5px; }
+
+.payment-page-container .amount-section .currency-section {
+  height: 30px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.3); }
+
+.payment-page-container .card-section {
+  align-items: center; }
+
+.payment-page-container .card-section h3 {
+  color: #008080; }
+
+.payment-page-container .card-section .input-fields {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.payment-page-container .card-section .input-fields .label-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; }
+
+.payment-page-container .card-section .input-fields .label-part label {
+  margin-bottom: 20px;
+  width: 200px;
+  text-align: right;
+  padding-right: 10px;
+  height: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+
+.payment-page-container .card-section .input-fields .input-part {
+  display: flex;
+  flex-direction: column; }
+
+.payment-page-container .card-section .input-fields .input-part .exp-section input {
+  width: 60px; }
+
+.payment-page-container .card-section .input-fields .input-part .exp-section #exp-yyyy {
+  width: 80px; }
+
+.payment-page-container .card-section .input-fields .input-part .exp-section span {
+  margin-left: 2px;
+  margin-right: 2px; }
+
+.payment-page-container .card-section .input-fields .input-part input {
+  margin-bottom: 20px;
+  height: 30px;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: solid 1px #dadada; }
+
+.payment-page-container .card-section .pay-now-btn-section {
+  display: flex;
+  margin: 0px auto;
+  align-items: center;
+  flex-direction: column; }
+
+.payment-page-container .card-section .pay-now-btn-section button {
+  height: 40px;
+  min-width: 150px;
+  display: block;
+  margin: 0px auto;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 4px 0 rgba(177, 51, 51, 0.3);
+  transition: all 1s;
+  background: #e0ebe8;
+  color: #008080;
+  border: 2px solid #90C695; }
+
+.payment-page-container .card-section .pay-now-btn-section button:hover {
+  transform: scale(1.2); }
+
+.payment-page-container .card-section .pay-now-btn-section .error-log {
+  margin-left: 26px;
+  color: #ff5c5c;
+  width: 230px;
+  margin-top: 10px; }

@@ -29,6 +29,7 @@ class PaymentWallWrapper extends React.Component {
       ps,
       additional_param_name,
       paymentMethod,
+      currency,
     } = this.props
     console.log("in paymentn wrapper", this.props)
     const { id } = paymentMethod || { id: "all"}
@@ -45,7 +46,7 @@ class PaymentWallWrapper extends React.Component {
             new Paymentwall.Product(
                 'product301', // ag_external_id
                 Number(`${amount}.00`), // amount
-                'USD', // currencycode
+                currency, // currencycode
                 'Gold Membership', // ag_name
                 Paymentwall.Product.TYPE_FIXED // ag_type
             )
@@ -77,7 +78,6 @@ class PaymentWallWrapper extends React.Component {
   render() {
     return (
       <div>
-        {/* {redirect && this.redirectToWidget()} */}
       </div>
     )
   }

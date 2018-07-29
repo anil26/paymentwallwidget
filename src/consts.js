@@ -33,6 +33,9 @@ const COUNTRY_LIST = [
     }
 ]
 
+const CURRENCY_MAP = ["USD", "INR", "AED", "EUR", "NZD"]
+
 export {
-    COUNTRY_LIST 
+    COUNTRY_LIST,
+    CURRENCY_MAP,
 }

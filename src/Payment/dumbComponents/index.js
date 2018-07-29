@@ -5,6 +5,7 @@ import CountrySelector from "./CountrySelector"
 import AmountToPay from "./AmountToPay"
 import { checkIfErrorExists } from "shared/helpers"
 import CardSection from "./CardSection"
+import { CURRENCY_MAP } from "consts"
 import "./styles.css"
 
 class Payment extends React.Component {
@@ -21,6 +22,7 @@ class Payment extends React.Component {
       amount: 0,
       paymentMethod: null,
       country: null,
+      currency: CURRENCY_MAP[0],
     }
 
   }
@@ -49,7 +51,11 @@ class Payment extends React.Component {
       amount: Number(value)
     })
   }
-
+  changeCurrency = (currency) => {
+    this.setState({
+      currency,
+    })
+  }
   setPaymentMethod = (paymentMethod) => {
     this.setState({
       paymentMethod,
@@ -61,7 +67,7 @@ class Payment extends React.Component {
     })
   }
   render() {
-    const { error, isError, amount, paymentMethod, country } = this.state
+    const { error, isError, amount, paymentMethod, country, currency } = this.state
     return (
       <div className="payment-page-container">
         <div className="header">
@@ -70,6 +76,7 @@ class Payment extends React.Component {
         <AmountToPay 
           ref={this.amountSection}
           changeAmount={this.changeAmount}
+          changeCurrency={this.changeCurrency}
         />
         <CountrySelector 
           ref={this.countrySection}
@@ -86,6 +93,7 @@ class Payment extends React.Component {
           error={error}
           isError={isError}
           amount={amount}
+          currency={currency}
         />
         <PaymentWallWrapper
           ref={this.paymentWallWrapper}
@@ -93,6 +101,7 @@ class Payment extends React.Component {
           paymentMethod={paymentMethod}
           isError={isError}
           country={country}
+          currency={currency}
         />
       </div>
     )

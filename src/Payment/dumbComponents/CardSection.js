@@ -35,7 +35,7 @@ class CardSection extends React.Component {
   }
   
   render() {
-    const { amount, isError, error } = this.props
+    const { amount, isError, error, currency } = this.props
     return (
       <div className="card-section">
         <h3>
@@ -61,7 +61,7 @@ class CardSection extends React.Component {
         </div>
         <div className="pay-now-btn-section" >
           <button onClick={this.onPayClick}>
-            Pay Amount {!!amount && amount}
+            Pay Amount {!!amount && amount} {!!amount && currency}
           </button>
           {isError && 
             <div className="error-log">
